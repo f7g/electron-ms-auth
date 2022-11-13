@@ -1,0 +1,32 @@
+{
+  "name": "electron-ms-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f7g/electron-ms-auth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/f7g/electron-ms-auth/issues"
+  },
+  "homepage": "https://github.com/f7g/electron-ms-auth#readme",
+  "dependencies": {
+    "@azure/msal-node": "^1.14.3",
+    "@microsoft/microsoft-graph-client": "^3.0.4",
+    "bootstrap": "^5.2.2",
+    "isomorphic-fetch": "^3.0.0",
+    "jquery": "^3.6.1",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "electron": "^20.0.0",
+    "prettier": "2.7.1"
+  }
+}

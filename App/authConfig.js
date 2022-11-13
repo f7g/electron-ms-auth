@@ -1,11 +1,10 @@
 const { LogLevel } = require("@azure/msal-node");
+const { CLIENT_ID, TENANT_ID } = require("./config");
 
-const AAD_ENDPOINT_HOST = "https://login.microsoftonline.com/"; // include the trailing slash
-const TENANT_ID = "";
 const msalConfig = {
   auth: {
-    clientId: "Enter_the_Application_Id_Here",
-    authority: AAD_ENDPOINT_HOST + TENANT_ID,
+    clientId: CLIENT_ID,
+    authority: "https://login.microsoftonline.com/" + TENANT_ID,
   },
   system: {
     loggerOptions: {
@@ -18,10 +17,9 @@ const msalConfig = {
   },
 };
 
-const GRAPH_ENDPOINT_HOST = "https://graph.microsoft.com/"; // include the trailing slash
 const protectedResources = {
   graphMe: {
-    endpoint: `${GRAPH_ENDPOINT_HOST}v1.0/me`,
+    endpoint: "https://graph.microsoft.com/v1.0/me",
     scopes: ["User.Read"],
   },
 };

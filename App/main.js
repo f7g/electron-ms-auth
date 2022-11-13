@@ -38,6 +38,8 @@ app.on("activate", () => {
 
 // Event handlers
 ipcMain.on(IPC_MESSAGES.LOGIN, async () => {
+  console.log("main.js ipcMain.on(IPC_MESSAGES.LOGIN");
+
   const account = await authProvider.login();
 
   await mainWindow.loadFile(path.join(__dirname, "./index.html"));

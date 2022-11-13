@@ -87,9 +87,8 @@ class AuthProvider {
           ...tokenRequest,
           openBrowser,
           successTemplate:
-            "<h1>Successfully signed in!</h1> <p>You can close this window now.</p>",
-          errorTemplate:
-            "<h1>Oops! Something went wrong</h1> <p>Check the console for more information.</p>",
+            "You have succesfully signed in. You can close this window.",
+          errorTemplate: "Something went wrong, please try signing in again.",
         }
       );
       return authResponse;
@@ -103,6 +102,7 @@ class AuthProvider {
    * @param response
    */
   async handleResponse(response) {
+    console.log("AuthProvider handleResponse(response)", response);
     if (response !== null) {
       this.account = response.account;
     } else {

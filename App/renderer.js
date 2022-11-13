@@ -13,6 +13,8 @@ const profileDiv = document.getElementById("profileDiv");
 window.renderer.showWelcomeMessage((event, account) => {
   if (!account) return;
 
+  console.log("window.renderer.showWelcomeMessage account:", account);
+
   cardDiv.style.display = "initial";
   welcomeDiv.innerHTML = `Welcome ${account.name}`;
   signInButton.hidden = true;
